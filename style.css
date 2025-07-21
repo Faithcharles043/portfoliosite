@@ -1,0 +1,284 @@
+:root {
+    --text-color:#1a1c20;
+    --link-color:#4a76ee;
+    --background-color:#FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: var(--background-color);
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;  
+}
+
+nav .left a {
+ color: var(--text-color);
+ font-size: 22px;
+ font-weight: 600;
+}
+
+nav .right a{
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child{
+   color: var(--background-color);
+   background-color: var(--text-color);
+   padding: 5px 15px ; 
+   border-radius: 5px;
+}
+
+nav .right a span{
+    margin-left: 5px;
+}
+/* SECTION 1: Hero*/
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px ;
+    gap: 40px;
+}
+.hero-section .text{
+    flex: 5;
+}
+.hero-section .text h2{
+    font-size: 45px;
+    }
+
+.hero-section .text .links{
+        margin-top: 25px;
+    }
+
+.hero-section .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+.hero-section .text .links a:hover{
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+
+}
+.hero-section .headshot{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .headshot img {
+    width: 350px ;
+    border-radius: 50%;
+}
+/*Section 2: Skills*/
+.skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2{
+    text-align: center;
+    font-size: 35px;
+}
+.skills-section .text{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells{
+  display: flex;
+  justify-content: center;  
+  flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #d3d3d3 ;
+    border-radius: 5px;
+}
+@media (max-width:850px) {
+    /*SECTION 1 : HERO*/
+    .hero-section .text h2{
+        font-size: 35px;
+    }
+}
+@media (max-width:740px) {
+    /*SECTION 1 : HERO*/
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+    .hero-section .headshot img {
+        width: 300px;
+    }
+} 
+
+@media (max-width:600px) {
+    /*navbar*/
+    nav{
+        padding: 0 20px;
+    }
+
+    nav .right a{
+        font-size: 22px;
+    }
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav .right a span{
+        display: none;
+    }
+
+    /*SECTION 1: HERO*/
+    .hero-section {
+    padding: 0 20px;
+}
+.hero-section .text h2{
+    font-size: 30px;
+}
+}
+
+
+
+/*  My CSS  */
+.nav-link{
+    margin-right: 30px;
+    color: #fff;
+}
+.nav-link:hover{
+    margin-right: 30px;
+    color: blue;
+}
+.hero-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .hero-links a {
+    transition: 0.3s ease-in-out;
+  }
+  
+  .hero-links a:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  
+  .hero-img {
+    width: 600px;               /* or any fixed square size you want */
+    height: 600px;
+    border-radius: 300;         /* makes it perfectly round */
+    object-fit: cover;          /* ensures the image fills the space */
+    border: 2px solid #fff;     /* optional white border */
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15); /* soft blue-ish ring */
+  }
+  
+  
+  .skill-card {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-icon {
+    max-height: 80px;
+    object-fit: contain;
+  }
+
+  .testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15); /* blue-ish border ring */
+    margin: 0 auto;
+  }
+  .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
+  .contact-section input,
+.contact-section textarea {
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.1);
+}
+
+.contact-section .btn-primary {
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.footer-section a:hover {
+    color: #0d6efd !important;
+    transition: 0.3s ease;
+  }
+
+nav .navbar{
+    background-color: rgba(13, 110, 253, 0.1) !important;
+    color: #fff !important;
+}
+
+.navbar-brand{
+    color: #fff;
+}
+
+.navbar-brand:hover{
+    color: blue;
+}
+
+.fa-brands{
+    color: #fff;
+}
